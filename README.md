@@ -1,5 +1,7 @@
 # SeleniumJava with BDD setup
 
+Refer this tutorial [SeleniumBDD](https://youtu.be/4e9vhX7ZuCw?si=w2fvkClSROFHoVod)
+
 1. Create Maven project,
 2. Add maven dependancies 
 
