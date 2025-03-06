@@ -9,13 +9,13 @@ import io.cucumber.junit.CucumberOptions;
      (
 		features ="src/test/resources/Features",
 		glue = {"StepDefinations"}, 
-		monochrome=true,
-		plugin = {
-				   "pretty","junit:target/JUnitReports/report.xml",
-				   "pretty","json:target/JSONReports/report.json",
-				   "pretty","html:target/HTMLReports"
-				},
-		tags="@smoketest"
+		//monochrome=true,
+//		plugin = {
+//				   "pretty","junit:target/JUnitReports/report.xml",
+//				   "pretty","json:target/JSONReports/report.json",
+//				   "pretty","html:target/HTMLReports"
+//				},
+		tags="@google"
 	 )
 public class TestRunner {
 

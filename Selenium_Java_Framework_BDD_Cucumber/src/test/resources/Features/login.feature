@@ -1,7 +1,7 @@
-@SmokeFeature
+
 Feature: Feature
 
-@smoketest
+@login
 Scenario: check user test 1
 
 Given user is on login page
