@@ -1,6 +1,7 @@
 package StepDefinations;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import io.cucumber.java.en.And;
@@ -15,7 +16,7 @@ public class GoogleSearchStep {
 	@Given("Browser is open")
 	public void browser_is_open() {
 		System.out.println("Browser is open 111");
-		
+
 		WebDriverManager.edgedriver().setup();
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
@@ -24,26 +25,29 @@ public class GoogleSearchStep {
 	@And("user is on google search page")
 	public void user_is_on_google_search_page() {
 		System.out.println("user is on google search page 222");
-		
-		
-		driver.get("https://www.google.co.in/");
-		
+
+		driver.get("https://practicetestautomation.com/practice-test-login/");
 	}
 
 	@When("user enter text in serach box")
 	public void user_enter_text_in_serach_box() {
 		System.out.println("user enter text in serach box 333");
-		
-		//driver.findElement(By.name("q")).sendKeys("Automation step by step");
+
+		 driver.findElement(By.name("q")).sendKeys("Automation step by step");
 	}
 
 	@And("hit enter")
 	public void hit_enter() {
 		System.out.println("hit enter 444");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 	}
 
 	@Then("user is navigated to result page")
 	public void user_is_navigated_to_result_page() {
+		
+		driver.getPageSource().contains("Automation Step by Step: NEVER STOP LEARNING");
 		System.out.println("user is navigated to result page 555");
+		
+		//driver.close();
 	}
 }
